@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+  <div class="container">
+    <h1>Semester 1 Subjects</h1>
+    <h4>ToTal Hours per first Semester is 100 hour</h4>
+    <h6>your credit hours is {{ st_hours }}</h6>
+    {% for message in messages %}
+      <div class="alert alert-danger">
+        {{ message }}
+      </div>
+    {% endfor %}
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Number of Hours</th>
+          <th>register Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for sub in subjects %}
+          <tr>
+            <td>{{ sub.name }}</td>
+            <td>{{ sub.number_of_hours }}</td>
+            {% if sub.reg %}
+              <td>
+                <a href="{% url 'subject:unregister' sub.id 1 %}" class="btn btn-primary">UnRegister</a>
+              </td>
+            {% else %}
+              <td>
+                <a href="{% url 'subject:register' sub.id 1 %}" class="btn btn-primary">Register</a>
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
