@@ -11,7 +11,7 @@ class Student(models.Model):
     )
 
     username = models.CharField(max_length=30, blank=False, default='')
-    email = models.EmailField(max_length=30, blank=False, default='a.abdelfatah.100@gmail.com')
+    email = models.EmailField(max_length=30, blank=False, default='')
     password = models.CharField(max_length=30, blank=False, default='')
 
     name = models.CharField(max_length=50, blank=False, default='')
