@@ -20,6 +20,7 @@ website for register hours for first and second semester
 * init your virtualenv `virtualenv env`
 * active virtualenv `source env/bin/activate`
 * you should install mariadb on your machine
+* create you databse in mariadb
 * open `credit_hours/config/settings.py`
 * put database information
 * install required packages on virtualenv `pip3 install -r requirements.txt`
