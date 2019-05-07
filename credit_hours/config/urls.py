@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from accounts.views import redirect_to_signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', redirect_to_signup),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('subject/', include('subject.urls', namespace='subject')),
 ]
+

@@ -56,3 +56,9 @@ def logout(request):
     return redirect('accounts:login')
   del request.session['id']
   return redirect('accounts:login')
+
+
+def redirect_to_signup(request):
+  return redirect('accounts:signup')
+
+
