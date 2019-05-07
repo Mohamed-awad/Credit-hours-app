@@ -21,11 +21,12 @@ website for register hours for first and second semester
 * active virtualenv `source env/bin/activate`
 * you should install mariadb on your machine
 * create you databse in mariadb
+* import db.sql file for this db
 * open `credit_hours/config/settings.py`
 * put database information
 * install required packages on virtualenv `pip3 install -r requirements.txt`
-* migrate models to create tables in db `python3 manage.py migrate`
 * enter credit_hours directory `cd credit_hours`
+* migrate models to create tables in db `python3 manage.py migrate`
 * run server `python3 manage.py runserver`
 * open browser on this link `http://127.0.0.1:8000/`
 
